@@ -8,9 +8,18 @@ class Project
     @backers = []
   end
 
+  def self.all
+    @@all_projects    
+  end
+
   def self.create(title)
     new_project = self.new(title)
     @@all_projects << new_project
+  end
+
+  def self.find(title)
+    self.all.find {|project| project.title == title}
+    
   end
 
   def add_backer(backer)
