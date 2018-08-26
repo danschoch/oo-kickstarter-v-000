@@ -23,6 +23,7 @@ class Project
 
   def add_backer(backer)
     @backers << backer
+    backer.backed_projects << self
   end
 
   def self.find_or_create_by_title(title)
