@@ -25,7 +25,7 @@ class Project
     @backers << backer
   end
 
-  def find_or_create_by_title(title)
+  def self.find_or_create_by_title(title)
     self.find(title) ? self.find(title) : self.create(title)
   end
 end
