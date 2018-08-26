@@ -9,7 +9,7 @@ class Project
   end
 
   def self.all
-    @@all_projects    
+    @@all_projects
   end
 
   def self.create(title)
@@ -19,7 +19,6 @@ class Project
 
   def self.find(title)
     self.all.find {|project| project.title == title}
-    
   end
 
   def add_backer(backer)
@@ -28,6 +27,5 @@ class Project
 
   def find_or_create_by_title(title)
     self.find(title) ? self.find(title) : self.create(title)
-
   end
 end
